@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Partner Savings Calculator</title>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-slate-50 to-emerald-50/50 min-h-screen flex items-center justify-center p-4">
+
+  <main class="bg-white w-full max-w-lg rounded-2xl p-6 md:p-8 shadow-2xl shadow-slate-200/80 border border-slate-100">
+    
+    <!-- Title Section -->
+    <div class="text-center mb-8">
+      <h2 class="text-2xl font-extrabold text-slate-800 tracking-tight">Double Income Savings</h2>
+      <p class="text-sm text-slate-500 mt-1">Calculating a combined 30% joint nest</p>
+    </div>
+
+    <!-- Inputs -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-6">
+      <div class="flex flex-col">
+        <label for="salary1" class="text-xs font-bold text-slate-600 uppercase tracking-wider mb-2">Partner 1 Payout</label>
+        <input 
+          type="number" 
+          id="salary1" 
+          placeholder="PHP0.00" 
+          min="0"
+          class="px-4 py-3 bg-slate-50/50 border border-slate-200 rounded-xl text-slate-800 font-medium placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all duration-200"
+        >
+      </div>
+      
+      <div class="flex flex-col">
+        <label for="salary2" class="text-xs font-bold text-slate-600 uppercase tracking-wider mb-2">Partner 2 Payout</label>
+        <input 
+          type="number" 
+          id="salary2" 
+          placeholder="PHP0.00" 
+          min="0"
+          class="px-4 py-3 bg-slate-50/50 border border-slate-200 rounded-xl text-slate-800 font-medium placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all duration-200"
+        >
+      </div>
+    </div>
+
+    <div class="border-t border-slate-100 my-6"></div>
+
+    <!-- Results Display -->
+    <div class="space-y-4">
+      
+      <!-- Card 1: Per Payout -->
+      <div class="bg-slate-50/80 p-4 rounded-xl border border-slate-100 transition-all hover:scale-[1.01] duration-200">
+        <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Joint Savings (Per Payout)</h3>
+        <p class="text-3xl font-black text-slate-800 my-1" id="single-saving">0.00</p>
+        <span class="text-xs text-slate-400">Combined 20% from single cutoff period</span>
+      </div>
+
+      <!-- Card 2: 6 Months (Highlighted) -->
+      <div class="bg-emerald-50/60 p-5 rounded-xl border border-emerald-100/80 transition-all hover:scale-[1.01] duration-200">
+        <h3 class="text-xs font-bold text-emerald-800/60 uppercase tracking-wider">6-Month Projection</h3>
+        <p class="text-4xl font-black text-emerald-600 my-1" id="six-month-saving">0.00</p>
+        <span class="text-xs text-emerald-700/60 font-medium">Accumulated across 12 standard payout periods</span>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
